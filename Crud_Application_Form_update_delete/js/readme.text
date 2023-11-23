@@ -1,0 +1,43 @@
+1.fetchData():
+
+Retrieves data from localStorage using the key 'userList'.
+Parses the data from JSON format or returns an empty array if there is no data.
+
+2.saveData(data):
+
+Saves the provided data to localStorage with the key 'userList' after converting it to a JSON string.
+
+3.displayUserData():
+
+Gets the element with the ID 'userData' from the HTML.
+Retrieves the user list using fetchData().
+Clears the content of the 'userData' element.
+Iterates through the user list and creates HTML elements (li) for each user, displaying their name and email along with "Edit" and "Delete" buttons.
+Appends the created elements to the 'userData' element.
+
+4.submitForm(event):
+
+Prevents the default form submission behavior.
+Retrieves name and email values from the form.
+Gets the current user list using fetchData().
+Checks if both name and email are not empty.
+If not empty, creates a new user object or updates an existing user based on whether there is an 'editIndex'.
+Saves the updated user list to localStorage, updates the display, and resets the form.
+
+5.editUser(index):
+
+Retrieves the user list and the data of the user at the specified index.
+Populates the form fields with the user's name and email.
+Changes the text of the submit button to 'Update' and sets a 'data-index' attribute to indicate that it's an update operation.
+
+6.deleteUser(index):
+
+Retrieves the user list, removes the user at the specified index, saves the updated list to localStorage, and updates the display.
+
+7.Initial display of user data:
+
+Calls displayUserData() to initially populate the user data on the page.
+
+8.Event listener for form submission:
+
+Listens for the 'submit' event on the form with the ID 'crudForm' and calls the submitForm function.
