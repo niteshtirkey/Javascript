@@ -1,0 +1,16 @@
+.accordion{
+    width: 600px;
+    margin: auto;
+    background-color:skyblue ;
+}
+.item{
+    border: 2px solid gray;
+}
+.title{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.title>span{
+    font-size: 2rem;
+}
